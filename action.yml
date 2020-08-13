@@ -1,5 +1,12 @@
 name: 'IssueBot'
 description: 'Standard comment on new issue'
+inputs:
+  repo-token:
+    description: 'Token for the issues only repo'
+    required: true
+  issue-message: 
+    description: 'Message to be displayed in the comment'
+    required: true
 runs:
   using: 'node12'
   main: 'new-issue.ts'
