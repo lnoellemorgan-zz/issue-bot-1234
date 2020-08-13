@@ -1,0 +1,17 @@
+# This is a basic workflow to help you get started with Actions
+  
+name: IssueBot
+
+on:
+  issues:
+    opened: [ master ]
+
+jobs:
+  issue_comment:
+    runs-on: ubuntu-latest
+    steps:
+    - name: New Issue Response
+      uses: lnoellemorgan/issue-bot-1234@master
+      with:   
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        issue-message: 'Message that will be displayed when an issue is submitted'
